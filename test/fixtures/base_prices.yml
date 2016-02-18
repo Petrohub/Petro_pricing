@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  b_reg: 9.99
+  b_mid: 9.99
+  b_pre: 9.99
+  supplier_id: 
+
+two:
+  b_reg: 9.99
+  b_mid: 9.99
+  b_pre: 9.99
+  supplier_id: 
