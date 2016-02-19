@@ -1,10 +1,13 @@
 class CreateRetailPrices < ActiveRecord::Migration
   def change
     create_table :retail_prices do |t|
-      t.float :r_reg
-      t.float :r_mid
-      t.float :r_pre
-      t.belongs_to :retailer, index: true, foreign_key: true
+      t.decimal :r_85
+      t.decimal :r_87
+      t.decimal :r_91
+      t.decimal :r_93
+      t.decimal :r_diesel
+      t.decimal :r_offroad
+      t.integer :retailer, index: true
 
       t.timestamps null: false
     end

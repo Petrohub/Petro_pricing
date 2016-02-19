@@ -1,5 +1,5 @@
 class AddSupplierToRetailPrices < ActiveRecord::Migration
   def change
-    add_reference :retail_prices, :supplier, index: true, foreign_key: true
+    add_column :retail_prices, :supplier_id, :integer, index: true
   end
 end
