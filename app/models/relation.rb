@@ -2,7 +2,7 @@ class Relation < ActiveRecord::Base
   after_save :gen_retail_price
   belongs_to :retailer
   belongs_to :supplier
-
+  belongs_to :retail_price
   def gen_retail_price
     @retail_price = RetailPrice.new
     @retail_price.r_reg = supplier.base_price.b_reg + f_reg
