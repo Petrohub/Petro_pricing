@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160222181311) do
     t.decimal  "o_85",            default: 0.0
     t.decimal  "o_87",            default: 0.0
     t.decimal  "o_91",            default: 0.0
+    t.decimal  "o_93",            default: 0.0
     t.decimal  "o_diesel",        default: 0.0
     t.decimal  "o_offroad",       default: 0.0
     t.integer  "retailer_id"
