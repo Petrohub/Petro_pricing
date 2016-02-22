@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222155657) do
+ActiveRecord::Schema.define(version: 20160222181311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,25 @@ ActiveRecord::Schema.define(version: 20160222155657) do
   end
 
   add_index "base_prices", ["supplier_id"], name: "index_base_prices_on_supplier_id", using: :btree
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "order_number"
+    t.decimal  "o_85",            default: 0.0
+    t.decimal  "o_87",            default: 0.0
+    t.decimal  "o_91",            default: 0.0
+    t.decimal  "o_diesel",        default: 0.0
+    t.decimal  "o_offroad",       default: 0.0
+    t.integer  "retailer_id"
+    t.integer  "supplier_id"
+    t.integer  "station_id"
+    t.integer  "retail_price_id"
+    t.decimal  "sub_total"
+    t.decimal  "delivery"
+    t.integer  "status",          default: 0
+    t.decimal  "total"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "relations", force: :cascade do |t|
     t.integer  "retailer_id"
@@ -51,13 +70,14 @@ ActiveRecord::Schema.define(version: 20160222155657) do
     t.decimal  "r_93"
     t.decimal  "r_diesel"
     t.decimal  "r_offroad"
-    t.integer  "retailer"
+    t.integer  "retailer_id"
+    t.integer  "relation_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "supplier_id"
   end
 
-  add_index "retail_prices", ["retailer"], name: "index_retail_prices_on_retailer", using: :btree
+  add_index "retail_prices", ["retailer_id"], name: "index_retail_prices_on_retailer_id", using: :btree
 
   create_table "stations", force: :cascade do |t|
     t.string   "brand"

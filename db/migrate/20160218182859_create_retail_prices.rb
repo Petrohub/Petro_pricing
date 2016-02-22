@@ -7,7 +7,8 @@ class CreateRetailPrices < ActiveRecord::Migration
       t.decimal :r_93
       t.decimal :r_diesel
       t.decimal :r_offroad
-      t.integer :retailer, index: true
+      t.integer :retailer_id, index: true
+      t.integer :relation_id
 
       t.timestamps null: false
     end

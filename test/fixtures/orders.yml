@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_number: MyString
+  o_85: 9.99
+  o_87: 9.99
+  o_91: 9.99
+  o_diesel: 9.99
+  o_offroad: 9.99
+  retailer_id: 1
+  supplier_id: 1
+  station_id: 1
+  retail_price_id: 1
+  sub_total: 9.99
+  delivery: 9.99
+  status: 1
+  total: 9.99
+
+two:
+  order_number: MyString
+  o_85: 9.99
+  o_87: 9.99
+  o_91: 9.99
+  o_diesel: 9.99
+  o_offroad: 9.99
+  retailer_id: 1
+  supplier_id: 1
+  station_id: 1
+  retail_price_id: 1
+  sub_total: 9.99
+  delivery: 9.99
+  status: 1
+  total: 9.99
