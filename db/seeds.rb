@@ -78,3 +78,15 @@ station = Station.create(
 	                     station_reg_number: "12334567",
 	                     retailer_id: Retailer.first.id
 	                    )
+
+order = Order.create(
+	                 o_85: 200,
+	                 o_87: 200,
+	                 o_91: 200,
+	                 o_93: 200,
+	                 o_diesel: 200,
+	                 o_offroad: 200,
+	                 retailer_id: Retailer.first.id,
+	                 supplier_id: Supplier.first.id,
+	                 station_id: Station.first.id
+	                )
