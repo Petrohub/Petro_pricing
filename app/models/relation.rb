@@ -1,3 +1,17 @@
+# create_table "relations", force: :cascade do |t|
+#  t.integer  "retailer_id"
+#  t.integer  "supplier_id"
+#  t.datetime "created_at",      null: false
+#  t.datetime "updated_at",      null: false
+#  t.decimal  "f_85"
+#  t.decimal  "f_87"
+#  t.decimal  "f_91"
+#  t.decimal  "f_93"
+#  t.decimal  "f_diesel"
+#  t.decimal  "f_offroad"
+#  t.integer  "retail_price_id"
+# end
+
 class Relation < ActiveRecord::Base
   after_save :gen_retail_price
   belongs_to :retailer
@@ -13,8 +27,7 @@ class Relation < ActiveRecord::Base
     @retail_price.r_offroad = supplier.base_price.b_offroad + f_offroad
     @retail_price.retailer = retailer
     @retail_price.supplier = supplier
-    @retail_price.relation_id = self.id
+    @retail_price.relation_id = id
     @retail_price.save
-    
   end
 end

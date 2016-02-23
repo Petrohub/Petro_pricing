@@ -1,3 +1,17 @@
+# create_table "base_prices", force: :cascade do |t|
+#    t.decimal  "b_85"
+#    t.decimal  "b_87"
+#    t.decimal  "b_91"
+#    t.decimal  "b_93"
+#    t.decimal  "b_diesel"
+#    t.decimal  "b_offroad"
+#    t.integer  "supplier_id"
+#    t.datetime "created_at",  null: false
+#    t.datetime "updated_at",  null: false
+#  end
+
+#  add_index "base_prices", ["supplier_id"], name: "index_base_prices_on_supplier_id", using: :btree
+
 class BasePrice < ActiveRecord::Base
   after_update :update_retail_customers
   belongs_to :supplier
