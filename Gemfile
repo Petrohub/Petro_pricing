@@ -13,12 +13,15 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
 end
 
+
 group :development do
+  gem "better_errors"
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
