@@ -17,7 +17,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'rails_12factor', group: :production
 gem 'carrierwave', '~> 0.10.0'
-
+# Test
 group :development, :test do
   gem 'byebug'
 end
